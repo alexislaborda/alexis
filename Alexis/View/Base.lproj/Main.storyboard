@@ -18,25 +18,91 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mwP-qo-GSB">
-                                <rect key="frame" x="16" y="165" width="343" height="272"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mwP-qo-GSB" customClass="AnimatedImageView" customModule="Alexis" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="93.5" width="375" height="500"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="gUg-Oz-qIY"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKo-bf-bD7">
-                                <rect key="frame" x="164" y="561" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xew-Yj-ONs">
+                                <rect key="frame" x="-0.5" y="30" width="375" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhO-mV-OVS">
+                                <rect key="frame" x="0.0" y="94" width="375" height="500"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mwP-qo-GSB" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="1dS-Yy-9RH"/>
+                            <constraint firstItem="mwP-qo-GSB" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="2dU-SE-Yrb"/>
+                            <constraint firstItem="jhO-mV-OVS" firstAttribute="height" secondItem="mwP-qo-GSB" secondAttribute="height" id="5lC-BO-4Aa"/>
+                            <constraint firstItem="Xew-Yj-ONs" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Cjm-AI-4xK"/>
+                            <constraint firstItem="mwP-qo-GSB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Dk6-Cj-lky"/>
+                            <constraint firstItem="Xew-Yj-ONs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Hye-cw-1nW"/>
+                            <constraint firstItem="jhO-mV-OVS" firstAttribute="centerY" secondItem="mwP-qo-GSB" secondAttribute="centerY" id="SjF-7U-JYl"/>
+                            <constraint firstItem="Xew-Yj-ONs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ibc-iy-1bA"/>
+                            <constraint firstItem="jhO-mV-OVS" firstAttribute="width" secondItem="mwP-qo-GSB" secondAttribute="width" id="mFi-Kf-BQo"/>
+                            <constraint firstItem="jhO-mV-OVS" firstAttribute="centerX" secondItem="mwP-qo-GSB" secondAttribute="centerX" id="nze-tw-jc0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="UGl-0m-UFe" appends="YES" id="Nd9-fQ-m9w"/>
+                            <outletCollection property="gestureRecognizers" destination="ds2-YC-wTJ" appends="YES" id="ydO-KE-9sZ"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="animatedImageView" destination="mwP-qo-GSB" id="Fnv-6U-A9c"/>
+                        <outlet property="containerView" destination="jhO-mV-OVS" id="k7C-Nh-ycj"/>
+                        <outlet property="lblScore" destination="Xew-Yj-ONs" id="dFD-n1-X3H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer cancelsTouchesInView="NO" direction="left" id="UGl-0m-UFe">
+                    <connections>
+                        <action selector="mainImageSwipeLeft:" destination="BYZ-38-t0r" id="Cvw-bf-b52"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer cancelsTouchesInView="NO" direction="right" id="ds2-YC-wTJ">
+                    <connections>
+                        <action selector="mainImagesSwipeRight:" destination="BYZ-38-t0r" id="VMt-UT-vF1"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-598" y="-370"/>
+        </scene>
+        <!--tvViewController-->
+        <scene sceneID="Ook-2x-sDj">
+            <objects>
+                <viewController storyboardIdentifier="tvViewController" title="tvViewController" id="Vae-rl-ltI" customClass="TVViewController" customModule="Alexis" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yHC-zN-TmK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogc-UH-rbu">
+                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="btnTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ihc-QJ-Ah9"/>
+                                    <action selector="touchteste:" destination="Vae-rl-ltI" eventType="touchUpInside" id="rav-M7-NiC"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ogc-UH-rbu" firstAttribute="centerX" secondItem="yHC-zN-TmK" secondAttribute="centerX" id="Kd0-LB-oLv"/>
+                            <constraint firstItem="ogc-UH-rbu" firstAttribute="centerY" secondItem="yHC-zN-TmK" secondAttribute="centerY" id="Klj-m2-OhC"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="teste" destination="ogc-UH-rbu" id="5Mg-M9-SRB"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9cI-yO-f4B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-144.80000000000001" y="-10.344827586206897"/>
+            <point key="canvasLocation" x="301.60000000000002" y="-371.51424287856076"/>
         </scene>
     </scenes>
 </document>

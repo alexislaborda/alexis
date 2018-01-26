@@ -12,6 +12,8 @@
 		996D850E2017DD810040AE05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 996D850C2017DD810040AE05 /* Main.storyboard */; };
 		996D85102017DD810040AE05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996D850F2017DD810040AE05 /* Assets.xcassets */; };
 		996D85132017DD810040AE05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 996D85112017DD810040AE05 /* LaunchScreen.storyboard */; };
+		999BF8B5201AC75900C1E2FA /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999BF8B4201AC75900C1E2FA /* AnimatedImageView.swift */; };
+		999BF8B9201ACD8B00C1E2FA /* TVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999BF8B8201ACD8B00C1E2FA /* TVViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		996D850F2017DD810040AE05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		996D85122017DD810040AE05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		996D85142017DD810040AE05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		999BF8B4201AC75900C1E2FA /* AnimatedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedImageView.swift; sourceTree = "<group>"; };
+		999BF8B8201ACD8B00C1E2FA /* TVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				996D85082017DD810040AE05 /* AppDelegate.swift */,
-				996D851B2017E38E0040AE05 /* Controller */,
 				996D851A2017E3870040AE05 /* View */,
+				996D851B2017E38E0040AE05 /* Controller */,
 				996D850F2017DD810040AE05 /* Assets.xcassets */,
 				996D85142017DD810040AE05 /* Info.plist */,
 			);
@@ -68,6 +72,7 @@
 			children = (
 				996D850C2017DD810040AE05 /* Main.storyboard */,
 				996D85112017DD810040AE05 /* LaunchScreen.storyboard */,
+				999BF8B4201AC75900C1E2FA /* AnimatedImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -76,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				996D850A2017DD810040AE05 /* ViewController.swift */,
+				999BF8B8201ACD8B00C1E2FA /* TVViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -154,6 +160,8 @@
 			files = (
 				996D850B2017DD810040AE05 /* ViewController.swift in Sources */,
 				996D85092017DD810040AE05 /* AppDelegate.swift in Sources */,
+				999BF8B9201ACD8B00C1E2FA /* TVViewController.swift in Sources */,
+				999BF8B5201AC75900C1E2FA /* AnimatedImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
