@@ -11,17 +11,18 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var btnImage: UIButton!
-    @IBOutlet weak var btnDoor: UIButton!
+
+    var images = [UIImage]()
     
     let defaultAlpha = CGFloat(0.1)
     
+    var timer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.btnDoor.alpha = self.defaultAlpha
-        
+    
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
@@ -36,20 +37,20 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func btnImageTouch(_ sender: UIButton) {
-        
-        blinkButton(button: self.btnDoor)
-        
-        /*
-        UIView.animate(withDuration: 0.8) {
-            self.btnDoor.alpha = 0.5
-            self.btnDoor.alpha = self.defaultAlpha
-        }*/
+    @IBAction func btnTouch(_ sender: UIButton) {
+    
+        for i in 0...84 {
+            
+            let image = UIImage(named: "quarto\(i)")
+            //images.append()
+            
+        }
         
     }
     
-    @IBAction func btnDoorTouch(_ sender: UIButton) {
+    @IBAction func btnImageTouch(_ sender: UIButton) {
         
-        print("door")
+//        blinkButton(button: self.btnDoor)
+        
     }
 }

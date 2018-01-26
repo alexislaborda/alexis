@@ -18,42 +18,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWw-TU-oAW">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <state key="normal" image="quarto_porta"/>
-                                <connections>
-                                    <action selector="btnImageTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pjB-5D-J2a"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYV-OS-BHr">
-                                <rect key="frame" x="108" y="262" width="57" height="261"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mwP-qo-GSB">
+                                <rect key="frame" x="16" y="165" width="343" height="272"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKo-bf-bD7">
+                                <rect key="frame" x="164" y="561" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="btnDoorTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oR3-Y9-drL"/>
+                                    <action selector="btnTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ihc-QJ-Ah9"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="hWw-TU-oAW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OcY-3l-Mg4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hWw-TU-oAW" secondAttribute="trailing" id="doW-GW-OGU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hWw-TU-oAW" secondAttribute="bottom" id="euK-gB-WpT"/>
-                            <constraint firstItem="hWw-TU-oAW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ozE-AQ-iT4"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="btnDoor" destination="XYV-OS-BHr" id="9SV-G2-NhW"/>
-                        <outlet property="btnImage" destination="hWw-TU-oAW" id="p6k-OL-QaJ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
+            <point key="canvasLocation" x="-144.80000000000001" y="-10.344827586206897"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="quarto_porta" width="1475" height="983"/>
-    </resources>
 </document>
