@@ -16,7 +16,7 @@ class AnimatedImageView: UIImageView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
-        for i in 0...85 {
+        for i in 0...84 {
             
             let image = UIImage(named: "quarto\(i)")
             allImages.append(image!)
@@ -95,7 +95,7 @@ class AnimatedImageView: UIImageView {
             
         case 2, 3:
             initialImageIndex = 58
-            finalImageIndex = 85
+            finalImageIndex = 84
             
         default:
             assertionFailure("CurrentCameraPosition not expected.")

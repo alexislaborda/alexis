@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShelfViewController: UIViewController {
+class ShelfViewController: BaseViewController {
 
     @IBOutlet weak var referenceImage: UIImageView!
     
@@ -24,4 +24,14 @@ class ShelfViewController: UIViewController {
         
     }
 
+    @IBAction func btnSonTouch(_ sender: UIButton) {
+        
+        mainViewController.updateLabelDescription(topicNumber: .son)
+    }
+    
+    @IBAction func btnBottlesTouch(_ sender: UIButton) {
+        
+        mainViewController.updateLabelDescription(topicNumber: .bottles)
+    }
+    
 }

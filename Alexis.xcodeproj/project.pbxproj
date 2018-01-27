@@ -23,6 +23,10 @@
 		9984E914201BF7F0002E7385 /* music3.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 9984E913201BF7F0002E7385 /* music3.m4a */; };
 		999BF8B5201AC75900C1E2FA /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999BF8B4201AC75900C1E2FA /* AnimatedImageView.swift */; };
 		999BF8B9201ACD8B00C1E2FA /* TVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999BF8B8201ACD8B00C1E2FA /* TVViewController.swift */; };
+		99A1A575201C0D3400C37DE2 /* OfficeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1A574201C0D3400C37DE2 /* OfficeViewController.swift */; };
+		99A1A577201C0D4900C37DE2 /* BedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1A576201C0D4900C37DE2 /* BedViewController.swift */; };
+		99A1A57C201C107A00C37DE2 /* Topics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1A57B201C107A00C37DE2 /* Topics.swift */; };
+		99A1A57E201C1EAC00C37DE2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1A57D201C1EAC00C37DE2 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		9984E913201BF7F0002E7385 /* music3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = music3.m4a; sourceTree = "<group>"; };
 		999BF8B4201AC75900C1E2FA /* AnimatedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedImageView.swift; sourceTree = "<group>"; };
 		999BF8B8201ACD8B00C1E2FA /* TVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVViewController.swift; sourceTree = "<group>"; };
+		99A1A574201C0D3400C37DE2 /* OfficeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeViewController.swift; sourceTree = "<group>"; };
+		99A1A576201C0D4900C37DE2 /* BedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedViewController.swift; sourceTree = "<group>"; };
+		99A1A57B201C107A00C37DE2 /* Topics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topics.swift; sourceTree = "<group>"; };
+		99A1A57D201C1EAC00C37DE2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,7 @@
 			children = (
 				9984E904201BE251002E7385 /* Resources */,
 				996D85082017DD810040AE05 /* AppDelegate.swift */,
+				99A1A578201C0FCE00C37DE2 /* Model */,
 				996D851A2017E3870040AE05 /* View */,
 				996D851B2017E38E0040AE05 /* Controller */,
 				996D850F2017DD810040AE05 /* Assets.xcassets */,
@@ -100,9 +109,12 @@
 			isa = PBXGroup;
 			children = (
 				996D850A2017DD810040AE05 /* ViewController.swift */,
-				999BF8B8201ACD8B00C1E2FA /* TVViewController.swift */,
 				9984E900201BCC7E002E7385 /* MainPageViewController.swift */,
+				99A1A57D201C1EAC00C37DE2 /* BaseViewController.swift */,
+				999BF8B8201ACD8B00C1E2FA /* TVViewController.swift */,
 				9984E902201BCFC4002E7385 /* ShelfViewController.swift */,
+				99A1A574201C0D3400C37DE2 /* OfficeViewController.swift */,
+				99A1A576201C0D4900C37DE2 /* BedViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -119,6 +131,14 @@
 				9984E913201BF7F0002E7385 /* music3.m4a */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		99A1A578201C0FCE00C37DE2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				99A1A57B201C107A00C37DE2 /* Topics.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +220,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99A1A57C201C107A00C37DE2 /* Topics.swift in Sources */,
 				9984E901201BCC7E002E7385 /* MainPageViewController.swift in Sources */,
 				996D850B2017DD810040AE05 /* ViewController.swift in Sources */,
 				996D85092017DD810040AE05 /* AppDelegate.swift in Sources */,
+				99A1A575201C0D3400C37DE2 /* OfficeViewController.swift in Sources */,
+				99A1A57E201C1EAC00C37DE2 /* BaseViewController.swift in Sources */,
+				99A1A577201C0D4900C37DE2 /* BedViewController.swift in Sources */,
 				999BF8B9201ACD8B00C1E2FA /* TVViewController.swift in Sources */,
 				999BF8B5201AC75900C1E2FA /* AnimatedImageView.swift in Sources */,
 				9984E903201BCFC4002E7385 /* ShelfViewController.swift in Sources */,

@@ -10,23 +10,29 @@ import UIKit
 
 class MainPageViewController: UIPageViewController {
     
-    var views = [UIViewController]()
+    var mainViewController: ViewController!
+    
+    var views = [BaseViewController]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let tvView = storyboard?.instantiateViewController(withIdentifier: "tvView") else {return}
-        guard let shelfView = storyboard?.instantiateViewController(withIdentifier: "shelfView") else {return}
-        guard let officeView = storyboard?.instantiateViewController(withIdentifier: "officeView") else {return}
-        guard let bedView = storyboard?.instantiateViewController(withIdentifier: "bedView") else {return}
+        views.append(getViewController(withIdentifier: "tvView")!)
+        views.append(getViewController(withIdentifier: "shelfView")!)
+        views.append(getViewController(withIdentifier: "officeView")!)
+        views.append(getViewController(withIdentifier: "bedView")!)
         
-        views.append(tvView)
-        views.append(shelfView)
-        views.append(officeView)
-        views.append(bedView)
+        guard let initialView = storyboard?.instantiateViewController(withIdentifier: "initialView") else {return}
         
-        setViewControllers([tvView], direction: .forward, animated: false, completion: nil)
+        setViewControllers([initialView], direction: .forward, animated: false, completion: nil)
+    }
+    
+    func getViewController(withIdentifier: String) -> BaseViewController? {
         
+        guard let view = storyboard?.instantiateViewController(withIdentifier: withIdentifier) as? BaseViewController else {return nil}
+        
+        view.mainViewController = mainViewController
+        return view
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,19 +43,26 @@ class MainPageViewController: UIPageViewController {
     func changePage(direction: UIPageViewControllerNavigationDirection) {
 
         guard let currentViewController = viewControllers?.first else {return}
-        guard let viewControllerIndex = views.index(of: currentViewController) else {return}
         
-        var newViewController: UIViewController!
-        
-        if direction == .forward {
+        if let currentBaseViewController = currentViewController as? BaseViewController {
             
-            newViewController = views[viewControllerIndex + 1]
+            guard let viewControllerIndex = views.index(of: currentBaseViewController) else {return}
+            
+            var newViewController: UIViewController!
+            
+            if direction == .forward {
+                
+                newViewController = views[viewControllerIndex + 1]
+            }
+            else {
+                
+                newViewController = views[viewControllerIndex - 1]
+            }
+            
+            setViewControllers([newViewController], direction: .forward, animated: false, completion: nil)
+        } else {
+            
+            setViewControllers([views.first!], direction: .forward, animated: false, completion: nil)
         }
-        else {
-
-            newViewController = views[viewControllerIndex - 1]
-        }
-        
-        setViewControllers([newViewController], direction: .forward, animated: false, completion: nil)
     }
 }

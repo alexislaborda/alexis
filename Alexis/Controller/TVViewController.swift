@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import AVKit
 
-class TVViewController: UIViewController {
+class TVViewController: BaseViewController {
 
     @IBOutlet weak var referenceImage: UIImageView!
     @IBOutlet weak var videoView: UIView!
@@ -18,6 +18,7 @@ class TVViewController: UIViewController {
     var player: AVPlayer!
     var playerLayer: AVPlayerLayer!
     
+    var isPlayingVideo = false
     var lastRandom = -1
     
     override func viewDidLoad() {
@@ -28,11 +29,10 @@ class TVViewController: UIViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         
-        stopVideo()
-    }
-    
-    @objc func playerItemReachEnd(notification: NSNotification) {
-        player.seek(to: kCMTimeZero)
+        if isPlayingVideo == true {
+        
+            stopPlayer()
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,11 +40,12 @@ class TVViewController: UIViewController {
 
     }
     
-    func stopVideo() {
+    func stopPlayer() {
 
         if player != nil {
             player.pause()
             videoView.layer.sublayers?.removeAll()
+            isPlayingVideo = false
         }
     }
     
@@ -61,15 +62,15 @@ class TVViewController: UIViewController {
         return randomNumber
     }
     
-    @IBAction func btnMusicTouch(_ sender: UIButton) {
-        stopVideo()
+    func playMedia(prefix: String, upper_bound: UInt32, withExtension: String) {
         
-        let videoNumber = getRandom(upper_bound: 4)
-        let videoURL = Bundle.main.url(forResource: "music\(videoNumber)", withExtension: "m4a")
+        stopPlayer()
+        
+        let videoNumber = getRandom(upper_bound: upper_bound)
+        let videoURL = Bundle.main.url(forResource: prefix + "\(videoNumber)", withExtension: withExtension)
         
         player = AVPlayer.init(url: videoURL!)
         player.actionAtItemEnd = .none
-        
         playerLayer = AVPlayerLayer(player: player)
         playerLayer.videoGravity = AVLayerVideoGravity.resizeAspect
         playerLayer.frame = videoView.bounds
@@ -77,28 +78,33 @@ class TVViewController: UIViewController {
         player.play()
         videoView.layer.position = videoView.center
         videoView.layer.insertSublayer(playerLayer, at: 0)
-        NotificationCenter.default.addObserver(self, selector: #selector(playerItemReachEnd(notification:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime , object: player.currentItem)
+    }
+    
+    @IBAction func btnMusicTouch(_ sender: UIButton) {
         
+        mainViewController.updateLabelDescription(topicNumber: .music)
+        
+        playMedia(prefix: "music", upper_bound: 4, withExtension: "m4a")
+        isPlayingVideo = false
     }
     
     @IBAction func btnVideoTouch(_ sender: UIButton) {
+     
+        mainViewController.updateLabelDescription(topicNumber: .video)
         
-        stopVideo()
-        
-        let videoNumber = getRandom(upper_bound: 3)
-        let videoURL = Bundle.main.url(forResource: "video\(videoNumber)", withExtension: "3gp")
-        
-        player = AVPlayer.init(url: videoURL!)
-        player.actionAtItemEnd = .none
-        
-        playerLayer = AVPlayerLayer(player: player)
-        playerLayer.videoGravity = AVLayerVideoGravity.resizeAspect
-        playerLayer.frame = videoView.bounds
-        
-        player.play()
-        videoView.layer.position = videoView.center
-        videoView.layer.insertSublayer(playerLayer, at: 0)
-        NotificationCenter.default.addObserver(self, selector: #selector(playerItemReachEnd(notification:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime , object: player.currentItem)
-        
+        playMedia(prefix: "video", upper_bound: 3, withExtension: "3gp")
+        isPlayingVideo = true
     }
+    
+    @IBAction func btnHotWheelsTouch(_ sender: UIButton) {
+        
+        mainViewController.updateLabelDescription(topicNumber: .hotWheels)
+    }
+    
+    
+    @IBAction func btnAntiqueTouch(_ sender: UIButton) {
+        
+        mainViewController.updateLabelDescription(topicNumber: .antique)
+    }
+    
 }
