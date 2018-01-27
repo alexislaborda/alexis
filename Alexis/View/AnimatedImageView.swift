@@ -71,10 +71,10 @@ class AnimatedImageView: UIImageView {
         startAnimating()
     }
     
-    func animate(reverse: Bool) {
+    func animate(reverse: Bool) -> Bool {
         
         if !canAnimate(reverse: reverse) {
-            return
+            return false
         }
         
         if reverse {
@@ -107,5 +107,7 @@ class AnimatedImageView: UIImageView {
             
             self.currentCameraPosition += 1
         }
+        
+        return true
     }
 }

@@ -12,6 +12,15 @@
 		996D850E2017DD810040AE05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 996D850C2017DD810040AE05 /* Main.storyboard */; };
 		996D85102017DD810040AE05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996D850F2017DD810040AE05 /* Assets.xcassets */; };
 		996D85132017DD810040AE05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 996D85112017DD810040AE05 /* LaunchScreen.storyboard */; };
+		9984E901201BCC7E002E7385 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9984E900201BCC7E002E7385 /* MainPageViewController.swift */; };
+		9984E903201BCFC4002E7385 /* ShelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9984E902201BCFC4002E7385 /* ShelfViewController.swift */; };
+		9984E90A201BEEFB002E7385 /* video0.3gp in Resources */ = {isa = PBXBuildFile; fileRef = 9984E907201BEEFA002E7385 /* video0.3gp */; };
+		9984E90B201BEEFB002E7385 /* video1.3gp in Resources */ = {isa = PBXBuildFile; fileRef = 9984E908201BEEFA002E7385 /* video1.3gp */; };
+		9984E90C201BEEFB002E7385 /* video2.3gp in Resources */ = {isa = PBXBuildFile; fileRef = 9984E909201BEEFA002E7385 /* video2.3gp */; };
+		9984E90E201BF57F002E7385 /* music0.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 9984E90D201BF57F002E7385 /* music0.m4a */; };
+		9984E911201BF79B002E7385 /* music2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 9984E90F201BF79B002E7385 /* music2.m4a */; };
+		9984E912201BF79B002E7385 /* music1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 9984E910201BF79B002E7385 /* music1.m4a */; };
+		9984E914201BF7F0002E7385 /* music3.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 9984E913201BF7F0002E7385 /* music3.m4a */; };
 		999BF8B5201AC75900C1E2FA /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999BF8B4201AC75900C1E2FA /* AnimatedImageView.swift */; };
 		999BF8B9201ACD8B00C1E2FA /* TVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999BF8B8201ACD8B00C1E2FA /* TVViewController.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +33,15 @@
 		996D850F2017DD810040AE05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		996D85122017DD810040AE05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		996D85142017DD810040AE05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9984E900201BCC7E002E7385 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		9984E902201BCFC4002E7385 /* ShelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfViewController.swift; sourceTree = "<group>"; };
+		9984E907201BEEFA002E7385 /* video0.3gp */ = {isa = PBXFileReference; lastKnownFileType = file; path = video0.3gp; sourceTree = "<group>"; };
+		9984E908201BEEFA002E7385 /* video1.3gp */ = {isa = PBXFileReference; lastKnownFileType = file; path = video1.3gp; sourceTree = "<group>"; };
+		9984E909201BEEFA002E7385 /* video2.3gp */ = {isa = PBXFileReference; lastKnownFileType = file; path = video2.3gp; sourceTree = "<group>"; };
+		9984E90D201BF57F002E7385 /* music0.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = music0.m4a; sourceTree = "<group>"; };
+		9984E90F201BF79B002E7385 /* music2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = music2.m4a; sourceTree = "<group>"; };
+		9984E910201BF79B002E7385 /* music1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = music1.m4a; sourceTree = "<group>"; };
+		9984E913201BF7F0002E7385 /* music3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = music3.m4a; sourceTree = "<group>"; };
 		999BF8B4201AC75900C1E2FA /* AnimatedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedImageView.swift; sourceTree = "<group>"; };
 		999BF8B8201ACD8B00C1E2FA /* TVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +76,7 @@
 		996D85072017DD810040AE05 /* Alexis */ = {
 			isa = PBXGroup;
 			children = (
+				9984E904201BE251002E7385 /* Resources */,
 				996D85082017DD810040AE05 /* AppDelegate.swift */,
 				996D851A2017E3870040AE05 /* View */,
 				996D851B2017E38E0040AE05 /* Controller */,
@@ -82,8 +101,24 @@
 			children = (
 				996D850A2017DD810040AE05 /* ViewController.swift */,
 				999BF8B8201ACD8B00C1E2FA /* TVViewController.swift */,
+				9984E900201BCC7E002E7385 /* MainPageViewController.swift */,
+				9984E902201BCFC4002E7385 /* ShelfViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		9984E904201BE251002E7385 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9984E907201BEEFA002E7385 /* video0.3gp */,
+				9984E908201BEEFA002E7385 /* video1.3gp */,
+				9984E909201BEEFA002E7385 /* video2.3gp */,
+				9984E90D201BF57F002E7385 /* music0.m4a */,
+				9984E910201BF79B002E7385 /* music1.m4a */,
+				9984E90F201BF79B002E7385 /* music2.m4a */,
+				9984E913201BF7F0002E7385 /* music3.m4a */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,7 +181,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				996D85132017DD810040AE05 /* LaunchScreen.storyboard in Resources */,
+				9984E90A201BEEFB002E7385 /* video0.3gp in Resources */,
 				996D85102017DD810040AE05 /* Assets.xcassets in Resources */,
+				9984E912201BF79B002E7385 /* music1.m4a in Resources */,
+				9984E90E201BF57F002E7385 /* music0.m4a in Resources */,
+				9984E90C201BEEFB002E7385 /* video2.3gp in Resources */,
+				9984E911201BF79B002E7385 /* music2.m4a in Resources */,
+				9984E90B201BEEFB002E7385 /* video1.3gp in Resources */,
+				9984E914201BF7F0002E7385 /* music3.m4a in Resources */,
 				996D850E2017DD810040AE05 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,10 +200,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9984E901201BCC7E002E7385 /* MainPageViewController.swift in Sources */,
 				996D850B2017DD810040AE05 /* ViewController.swift in Sources */,
 				996D85092017DD810040AE05 /* AppDelegate.swift in Sources */,
 				999BF8B9201ACD8B00C1E2FA /* TVViewController.swift in Sources */,
 				999BF8B5201AC75900C1E2FA /* AnimatedImageView.swift in Sources */,
+				9984E903201BCFC4002E7385 /* ShelfViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

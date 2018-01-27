@@ -14,21 +14,36 @@ class ViewController: UIViewController {
     @IBOutlet weak var animatedImageView: AnimatedImageView!
     @IBOutlet weak var containerView: UIView!
     
+    var mainPageViewController: MainPageViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        containerView = storyboard?.instantiateViewController(withIdentifier: "tvViewController").view
         
     }
     
     @IBAction func mainImageSwipeLeft(_ sender: UISwipeGestureRecognizer) {
     
-        self.animatedImageView.animate(reverse: false)
+        if self.animatedImageView.animate(reverse: false) == true {
+            
+            mainPageViewController.changePage(direction: .forward)
+        }
     }
     
     @IBAction func mainImagesSwipeRight(_ sender: UISwipeGestureRecognizer) {
         
-        self.animatedImageView.animate(reverse: true)
+        if self.animatedImageView.animate(reverse: true) == true {
+            
+            mainPageViewController.changePage(direction: .reverse)
+        }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let segueName = segue.identifier
+        if segueName == "pageControllerEmbed" {
+            
+            mainPageViewController = segue.destination as! MainPageViewController
+        }
     }
     
     override func didReceiveMemoryWarning() {
